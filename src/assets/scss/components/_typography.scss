@@ -1,0 +1,78 @@
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top:0;
+    font-family: $martel;
+}
+
+ul {
+    margin-top: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+p {
+    margin-top:0;
+
+    a {
+        color: $yellow;
+        transition: opacity .3s ease;
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+h1 {
+    font-size: rem-calc(43);
+    font-weight: $extra-bold-weight;
+    @include breakpoint(medium down) {
+        font-size: rem-calc(28);
+    }
+}
+
+h2 {
+    font-size: rem-calc(30);
+    font-weight: $bold-weight;
+    @include breakpoint(medium down) {
+        font-size: rem-calc(22);
+    }
+}
+
+h3 {
+    font-family: $source-sans;
+    font-size: rem-calc(28);
+    font-weight: $light-weight;
+    @include breakpoint(medium down) {
+        font-size: rem-calc(22);
+    }
+}
+
+h4 {
+    font-family: $source-sans;
+    font-size: rem-calc(18);
+    font-weight: $black-weight;
+    @include breakpoint(medium down) {
+        font-size: rem-calc(14);
+    }
+}
+
+h5 {
+    font-family: $source-sans;
+    font-size: rem-calc(18);
+    @include breakpoint(medium down) {
+        font-size: rem-calc(16);
+    }
+}
+
+h6 {
+    font-family: $source-sans;
+    font-size: rem-calc(12);
+    @include breakpoint(medium down) {
+        font-size: rem-calc(10);
+    }
+}

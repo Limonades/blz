@@ -1,0 +1,169 @@
+.btn-blue {
+    text-transform: uppercase;
+    color: $blue-light;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 10px 30px;
+    font-weight: $bold-weight;
+    position: relative;
+    z-index:10;
+    text-align: center;
+    border: 2px solid $blue-light;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: -22px;
+        content: '';
+        width: 20px;
+        height: 100%;
+    }
+    &:after {
+        position: absolute;
+        top: 0;
+        right: -16px;
+        content: '';
+        width: 14px;
+        height: 100%;
+    }
+    @include breakpoint(medium down) {
+        font-size: 9px;
+        padding: 5px 20px;
+    }
+    &:hover {
+        .btn-blue-l-a {
+            &.--l1 {
+                width: 0;
+            }
+            &.--l2 {
+                width: 0;
+            }
+            &.--l3 {
+                right: 100%;
+                width: 0;
+            }
+            &.--l4 {
+                width:0;
+            }
+        }
+        .btn-blue-r-a {
+            &.--l1 {
+                width: 0;
+            }
+            &.--l2 {
+                width: 0;
+            }
+            &.--l3 {
+                left: 100%;
+                width: 0;
+            }
+            &.--l4 {
+                width:0;
+            }
+            &.--l5 {
+                width:0;
+            }
+        }
+    }
+}
+
+.btn-blue-l-a {
+    position: absolute;
+    transition: width .3s ease-in-out, right .3s ease-in-out;
+    z-index: -1;
+    background-color: $blue-light;
+    height: 2px;
+    &.--l1 {
+        width: 22px;
+        top: 9px;
+        right: 100%;
+        @include breakpoint(medium down) {
+            top:4px;
+            width: 18px;
+        }
+    }
+    &.--l2 {
+        width: 12px;
+        top: 9px;
+        left: 0;
+        @include breakpoint(medium down) {
+            top:4px;
+            width: 10px;
+        }
+    }
+    &.--l3 {
+        width: 10px;
+        top: 19px;
+        right: 103%;
+        @include breakpoint(medium down) {
+            width: 8px;
+            top: 11px;
+            right: 104%;
+        }
+    }
+    &.--l4 {
+        width: 8px;
+        top: 27px;
+        right: 100%;
+        @include breakpoint(medium down) {
+            width: 7px;
+            top: 17px;
+            right: 100%;
+        }
+    }
+}
+
+.btn-blue-r-a {
+    position: absolute;
+    transition: width .3s ease-in-out, left .3s ease-in-out;
+    z-index: -1;
+    background-color: $blue-light;
+    height: 2px;
+    &.--l1 {
+        width: 12px;
+        top: 9px;
+        left: 100%;
+        @include breakpoint(medium down) {
+            width: 12px;
+            top: 4px;
+            left: 100%;
+        }
+    }
+    &.--l2 {
+        width: 7px;
+        top: 9px;
+        right: 0;
+        @include breakpoint(medium down) {
+            width: 4px;
+            top: 4px;
+            right: 0;
+        }
+    }
+    &.--l3 {
+        width: 11px;
+        top: 19px;
+        left: 102%;
+        @include breakpoint(medium down) {
+            width: 10px;
+            top: 11px;
+            left: 105%;
+        }
+    }
+    &.--l4 {
+        width: 16px;
+        top: 26px;
+        left: 100%;
+        @include breakpoint(medium down) {
+            top:17px;
+            width: 14px;
+        }
+    }
+    &.--l5 {
+        width: 14px;
+        top: 26px;
+        right: 0;
+        @include breakpoint(medium down) {
+            top:17px;
+            width: 12px;
+        }
+    }
+}

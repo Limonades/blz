@@ -1,0 +1,203 @@
+nav {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    animation: test;
+    transition: top .3s ease;
+    padding: 0 34px;
+    padding-top:36px;
+    @include breakpoint(small only) {
+        padding: 0 16px;
+        padding-top:20px;
+    }
+    .logo-fixed {
+        display: none;
+    }
+    .nav-wrap {
+        margin: 0;
+    }
+    &.--menu-open {
+        background-color: white;
+        .icon-logo-white {
+            display: none;
+        }
+        .logo-fixed {
+            display: flex;
+        }
+        .logo {
+            i {
+                &:before {
+                    color: $blue;
+                }
+            }
+        }
+        .mobile-menu__item {
+            opacity: 1;
+            transition: opacity 1.5s ease;
+        }
+    }
+    &.--fixed {
+        position: fixed;
+        top: -200px;
+        left: 0;
+        background-color: white;
+        padding: 4px 16px;
+        .logo {
+            i {
+                &:before {
+                    color: $blue;
+                }
+            }
+            .icon-logo-white {
+                display: none;
+            }
+            .logo-fixed {
+                display: flex;
+            }
+        }
+        .nav-menu__link {
+            color: $blue;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                margin: 0 auto;
+                bottom:-2px;
+                left:0;
+                right:0;
+                height: 2px;
+                width: 0;
+                background-color: $blue;
+                transition: width .3s ease;
+            }
+            &:hover {
+                &:after {
+                    width: 100%;
+                }
+            }
+            &.--active {
+                color: $blue;
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &.--half-bg {
+        @include breakpoint(medium) {
+            .icon-logo-white {
+                display: none;
+            }
+            .logo-fixed {
+                display: flex;
+            }
+            .logo {
+                i {
+                    &:before {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+
+    &.--animated {
+        top:0;
+    }
+}
+
+.nav {
+    &-wrap {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 46px;
+        margin-bottom: 186px;
+        position: relative;
+        z-index: 100;
+        @include breakpoint(medium down) {
+            margin-bottom: 82px;
+        }
+    }
+    &-menu {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        &__item {
+            margin-right: 26px;
+            &.--btn {
+                margin-left:26px;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &__link {
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 700;
+            transition: color .3s ease;
+            &:hover {
+                color: $yellow;
+            }
+            &.--active {
+                color: $yellow;
+            }
+
+        }
+    }
+}
+
+.logo {
+    &-fixed {
+        width: 42px;
+        height: 66px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.mobile-menu {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: 90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: height .8s cubic-bezier(0.23, 1, 0.32, 1);
+    overflow: hidden;
+    &.--open {
+        height: 100vh;
+    }
+    &__item {
+        opacity: 0;
+        transition: opacity .1s ease;
+        width: 160px;
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        line-height: 28px;
+        font-family: $source-sans;
+        text-transform: uppercase;
+        margin-bottom: 46px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__link {
+        color: $blue;
+        text-transform: uppercase;
+    }
+}
+
+
+

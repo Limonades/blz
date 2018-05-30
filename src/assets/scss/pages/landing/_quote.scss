@@ -1,0 +1,146 @@
+.quote {
+    margin-bottom:rem-calc(140);
+    position: relative;
+    @include breakpoint(medium down) {
+        margin-bottom:rem-calc(90);
+    }
+    &-bg {
+        position: absolute;
+        &.--left {
+            left: 15px;
+            bottom: -70px;
+            @include breakpoint(1400 down) {
+                left:-70px;
+            }
+            @include breakpoint(large down) {
+                bottom: -150px;
+                left: -90px;
+            }
+            @include breakpoint(medium down) {
+                bottom: -75px;
+                left: 0;
+                max-width: 222px;
+            }
+            @include breakpoint(900 down) {
+                max-width: 192px;
+            }
+            @include breakpoint(767 down) {
+                bottom: -75px;
+                left: -60px;
+            }
+            @include breakpoint(small only) {
+                max-width: 142px;
+                bottom: -85px;
+                left: -45px;
+            }
+        }
+        &.--right {
+            right: 0;
+            top: -50px;
+            @include breakpoint(1400 down) {
+                right: -120px;
+            }
+            @include breakpoint(large down) {
+                right: -130px;
+                top:-115px;
+            }
+            @include breakpoint(medium down) {
+                top:-98px;
+                right: 0;
+            }
+            @include breakpoint(900 down) {
+                max-width: 220px;
+            }
+            @include breakpoint(small only) {
+                top:-25px;
+                right: -65px;
+                max-width: 160px;
+            }
+        }
+        @include breakpoint(medium down) {
+            max-width: 250px;
+        }
+    }
+    &-wrap {
+        display: flex;
+        background-color: white;
+        width: 100%;
+        max-width: rem-calc(950);
+        margin: 0 auto;
+        padding: rem-calc(54) rem-calc(110);
+        box-shadow: 0 0 10px 0 rgba(202,202,202,0.3);
+        @include breakpoint(medium down) {
+            padding: rem-calc(54) rem-calc(60);
+        }
+        @include breakpoint(small only) {
+            flex-direction: column;
+            margin: 0 rem-calc(8);
+            padding: rem-calc(40) rem-calc(34);
+            width: auto;
+        }
+    }
+    &-icon {
+        width: 10%;
+        i {
+            &:before {
+                font-size: rem-calc(34);
+                @include breakpoint(small only) {
+                    font-size: rem-calc(46);
+                }
+            }
+        }
+        @include breakpoint(medium down) {
+            width: 15%;
+        }
+        @include breakpoint(small only) {
+            width: 100%;
+            text-align: center;
+            margin-bottom:rem-calc(24);
+        }
+    }
+    &-txt-wrap {
+        width: 90%;
+        @include breakpoint(medium down) {
+            width: 85%;
+        }
+        @include breakpoint(small only) {
+            width: 100%;
+        }
+    }
+    &-txt {
+        color: #333333;
+        font-size: rem-calc(28);
+        font-weight: $light-weight;
+        letter-spacing: 0.07px;
+        line-height: 40px;
+        @include breakpoint(medium down) {
+            font-size: rem-calc(22);
+            line-height: rem-calc(32);
+        }
+    }
+    &-author {
+        color: $blue-light;
+        text-transform: uppercase;
+        font-size: rem-calc(12);
+        font-weight: $semi-bold-weight;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+        padding-left:rem-calc(12);
+        position: relative;
+        @include breakpoint(small only) {
+            font-size: rem-calc(10);
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            width: 6px;
+            height: 1px;
+            background-color: $blue-light;
+            top:9px;
+            left:0;
+            @include breakpoint(small only) {
+                top:7px;
+            }
+        }
+    }
+}

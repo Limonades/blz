@@ -1,0 +1,44 @@
+.pentagon-wrap.--contact {
+    padding: 54px 122px;
+    @include breakpoint(medium down) {
+        padding: 54px 60px;
+    }
+    @include breakpoint(small only) {
+        padding: 54px 30px;
+    }
+    .pentagon__txt {
+        margin-bottom: 0;
+        &:last-of-type {
+            margin-bottom: 60px;
+        }
+        @include breakpoint(medium down) {
+            margin-bottom: 18px;
+            &:last-of-type {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
+.pentagon.--contact {
+    .pentagon-bg {
+        z-index: 10;
+    }
+}
+
+.pentagon.--contact {
+    .pentagon__title.--source {
+        font-family: $martel;
+        font-weight: bold;
+    }
+}
+
+.pentagon-wrap.--contact-ty {
+    padding: 150px 122px;
+    @include breakpoint(medium down) {
+        padding: 150px 60px;
+    }
+    @include breakpoint(small only) {
+        padding: 75px 30px;
+    }
+}

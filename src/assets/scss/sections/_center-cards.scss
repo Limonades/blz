@@ -1,0 +1,126 @@
+.center-cards {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    padding-top: 135px;
+    @include breakpoint(medium down) {
+        padding-top: 104px;
+        margin-bottom: 50px;
+    }
+    @include breakpoint(390px down) {
+        padding-top: 78px;
+    }
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 964px;
+        z-index: 1;
+        @include breakpoint(medium down) {
+            max-width: 704px;
+        }
+    }
+    &__card {
+        padding: 34px 38px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: white;
+        width: 450px;
+        margin: 16px;
+        box-shadow: 0 12px 42px 12px rgba(0,0,0,0.03);
+        @include breakpoint(medium down) {
+            width: 344px;
+            margin: 4px;
+            padding: 32px;
+        }
+        @media (min-width: 640px) and (max-width: 706px) {
+            width: 312px;
+        }
+        @include breakpoint(small only) {
+            width: 100%;
+            max-width: 344px;
+            margin: 0 16px;
+            margin-bottom: 32px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &-title {
+            color: #333333;
+            font-family:$source-sans;
+            font-size: 28px;
+            font-weight: $light-weight;
+            letter-spacing: 0.07px;
+            margin-bottom:16px;
+            @include breakpoint(medium down) {
+                font-size: 22px;
+                margin-bottom:12px;
+                font-weight: 400;
+                margin-bottom: 12px;
+            }
+        }
+        &-txt {
+            color: #333333;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            line-height: 28px;
+            margin-bottom:50px;
+            width: 100%;
+            @include breakpoint(medium down) {
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 22px;
+            }
+        }
+        &-btn {
+            color: $yellow;
+            font-size: 12px;
+            font-weight: $bold-weight;
+            letter-spacing: 1px;
+            line-height: 15px;
+            text-transform: uppercase;
+            padding-right: 30px;
+            position: relative;
+            margin-top: auto;
+            &:before {
+                font-family: 'Bluzzelle' !important;
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                position: absolute;
+                top: 2px;
+                right: -6px;
+                content: '\e900';
+                color: $yellow;
+                transition: right .3s ease;
+            }
+            &:hover {
+                &:before {
+                    right: -30px;
+                }
+            }
+        }
+    }
+}
+
+.bg-title.--center-cards {
+    position: absolute;
+    top:0;
+    left: 0;
+    max-width: 800px;
+    line-height: 88px;
+    @include breakpoint(medium down) {
+        max-width: 600px;
+        font-size: 61px;
+        letter-spacing: 4.78px;
+        line-height: 60px;
+    }
+    @include breakpoint(390px down) {
+        font-size: 44px;
+        line-height: 44px;
+    }
+}

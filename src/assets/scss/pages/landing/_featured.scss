@@ -1,0 +1,46 @@
+.featured {
+    margin-bottom:rem-calc(140);
+    @include breakpoint(medium down) {
+        margin-bottom: rem-calc(90);
+    }
+    @include breakpoint(small only) {
+        margin-bottom:rem-calc(66);
+    }
+    &__title {
+        color: $blue;
+        font-size:rem-calc(12);
+        font-weight: $semi-bold-weight;
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: rem-calc(38);
+        @include breakpoint(small only) {
+            margin-bottom:rem-calc(16);
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include breakpoint(small only) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &-item {
+            max-width: 100px;
+            @include breakpoint(medium down) {
+                max-width: 85px;
+            }
+            @include breakpoint(small only) {
+                max-width: 134px;
+                margin: rem-calc(10);
+                width: 26%;
+                text-align: center;
+            }
+            img {
+                max-height: 50px;
+            }
+        }
+    }
+}
+

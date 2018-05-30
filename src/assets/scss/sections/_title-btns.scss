@@ -1,0 +1,53 @@
+.title-btns {
+    margin-bottom:134px;
+    @include breakpoint(medium down) {
+        margin-bottom: 60px;
+    }
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 100px;
+        margin-top: 26px;
+        @include breakpoint(medium down) {
+            margin-left:26px;
+        }
+        @include breakpoint(small only) {
+            margin-left: 0;
+            margin-bottom:41px;
+        }
+        &.--right {
+            margin-top: 0;
+            margin-bottom:0;
+            a {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        a {
+            margin-bottom: 24px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__txt {
+        color: #333333;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        line-height: 28px;
+        @include breakpoint(medium down) {
+            font-size: 16px;
+            letter-spacing: 0.44px;
+            line-height: 24px;
+        }
+    }
+}
+
+.section-title.--title-btns {
+    margin-bottom: 80px;
+    @include breakpoint(medium down) {
+        margin-bottom: 36px;
+    }
+}

@@ -1,0 +1,44 @@
+.txt-photos__wrap.--team {
+    justify-content: flex-end;
+    .txt-photos__photos-wrap {
+        margin-right: -210px;
+        @include breakpoint(1450px down) {
+            margin-right: -170px;
+        }
+        @include breakpoint(1400px down) {
+            margin-right: -100px;
+        }
+        @include breakpoint(1350px down) {
+            margin-right: 0;
+        }
+        @include breakpoint(large down) {
+            width: 81%;
+            display: flex;
+        }
+        @include breakpoint(medium down) {
+            width: 100%;
+            flex-wrap: nowrap;
+            margin-top: 38px;
+        }
+        @include breakpoint(small only) {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.bg-title.--txt-photos.--team {
+    top:300px;
+    @include breakpoint(medium down) {
+        top:22px;
+    }
+}
+
+.team-cards.--team {
+    margin-top: -230px;
+    @include breakpoint(medium down) {
+        margin-top: -168px;
+    }
+    @include breakpoint(small only) {
+        margin-top: -100px;
+    }
+}

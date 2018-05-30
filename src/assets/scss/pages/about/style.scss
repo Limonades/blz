@@ -1,0 +1,12 @@
+.header.--about {
+    @include breakpoint(medium down) {
+        margin-bottom: 140px;
+    }
+    @include breakpoint(small only) {
+        margin-bottom: 74px;
+    }
+}
+
+.txt-photos.--about {
+    margin-bottom: 0;
+}

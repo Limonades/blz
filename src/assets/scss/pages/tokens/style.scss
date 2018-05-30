@@ -1,0 +1,31 @@
+.bg-title.--txt-cards.--tokens {
+    top:66px;
+    max-width: 440px;
+    @include breakpoint(medium down) {
+        max-width: 100%;
+    }
+    @include breakpoint(small only) {
+        max-width: 300px;
+        line-height: 42px;
+    }
+}
+
+.section-title.--tokens {
+    @include breakpoint(medium down) {
+        margin-top: 36px;
+    }
+}
+
+.header.--tokens {
+    padding-top: 180px;
+    @include breakpoint(medium down) {
+        padding-top: 130px;
+    }
+    @include breakpoint(small only) {
+        padding-bottom: 50px;
+    }
+}
+
+.txt-cards__txt-wrap.--tokens {
+    max-width: 440px;
+}

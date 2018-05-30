@@ -1,0 +1,88 @@
+$bar-width: 27px;
+$bar-height: 3px;
+$bar-spacing: 12px;
+
+
+//.menu-wrapper {
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    right: 0;
+//    bottom: 0;
+//    margin: auto;
+//    width: $bar-width;
+//    height: $bar-height + $bar-spacing*2;
+//    cursor: pointer;
+//}
+
+.hamburger-wrap {
+    width: 35px;
+    padding-left: 8px;
+    height: $bar-height - 1 + $bar-spacing*2;
+    cursor: pointer;
+}
+
+.hamburger-menu,
+.hamburger-menu:after,
+.hamburger-menu:before {
+    width: $bar-width;
+    height: $bar-height;
+    @include breakpoint(small only) {
+        width: 22px;
+    }
+}
+
+.hamburger-menu:after,
+.hamburger-menu:before {
+    width: 35px;
+    @include breakpoint(small only) {
+        width: 30px;
+    }
+}
+
+.hamburger-menu {
+    position: relative;
+    transform: translateY($bar-spacing);
+    background: $yellow;
+    transition: all 0ms 300ms;
+
+    &.--open {
+        background: rgba(255, 255, 255, 0);
+    }
+}
+
+.hamburger-menu:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: $bar-spacing;
+    background: $yellow;
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    @include breakpoint(small only) {
+        bottom: 10px;
+    }
+}
+
+.hamburger-menu:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: $bar-spacing;
+    background: $yellow;
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    @include breakpoint(small only) {
+        top:10px;
+    }
+}
+
+.hamburger-menu.--open:after {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
+
+.hamburger-menu.--open:before {
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}

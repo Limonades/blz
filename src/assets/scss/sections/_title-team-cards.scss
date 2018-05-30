@@ -1,0 +1,125 @@
+.title-team-cards {
+    margin-bottom: 100px;
+    @include breakpoint(medium down) {
+        margin-bottom: 70px;
+    }
+    &-container {
+        display: flex;
+        justify-content: flex-end;
+        @include breakpoint(large down) {
+            justify-content: center;
+        }
+    }
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1199px;
+        @include breakpoint(large down) {
+            max-width: 1026px;
+        }
+        @include breakpoint(medium down) {
+            max-width: 704px;
+        }
+        @media (min-width: 640px) and (max-width: 705px) {
+            max-width:640px;
+        }
+        @include breakpoint(small only) {
+            justify-content: center;
+        }
+    }
+    &__card {
+        padding: 40px;
+        background-color: white;
+        width: 362px;
+        margin: 18px;
+        @media (min-width: 1024px) and (max-width: 1030px) {
+            margin: 17px;
+        }
+        @include breakpoint(large down) {
+            width: 306px;
+        }
+        @include breakpoint(medium down) {
+            width: 344px;
+            margin: 8px 4px;
+        }
+        @media (min-width: 640px) and (max-width: 705px) {
+            width: 312px;
+        }
+        @include breakpoint(small only) {
+            margin: 0 16px 18px 16px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+    &__name {
+        color: #333333;
+        font-size: 28px;
+        font-weight: 300;
+        letter-spacing: 0.07px;
+        line-height: 40px;
+        margin-bottom: 2px;
+        font-family: $source-sans;
+        @include breakpoint(medium down) {
+            font-size: 22px;
+            letter-spacing: 0.05px;
+            line-height: 30px;
+            font-weight: 400;
+        }
+    }
+    &__position {
+        color: $blue;
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        line-height: 28px;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+        @include breakpoint(medium down) {
+            font-size: 14px;
+            letter-spacing: 1.17px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+    }
+    &__subtitle {
+        color: #333333;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        line-height: 28px;
+        margin-bottom: 22px;
+        @include breakpoint(medium down) {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 16px;
+        }
+    }
+    &__info {
+        color: #333333;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        line-height: 28px;
+        margin-bottom: 0;
+        @include breakpoint(medium down) {
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+}
+
+.section-title.--title-team-cards {
+    max-width: 689px;
+    color: #333333;
+    font-size: 30px;
+    line-height: 45px;
+    margin-bottom: 70px;
+    @include breakpoint(medium down) {
+        font-size: 22px;
+        letter-spacing: -0.07px;
+        line-height: 34px;
+        margin-top: -10px;
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,97 @@
+.line-cards {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 52px;
+    @include breakpoint(medium down) {
+        justify-content: center;
+        padding-top: 94px;
+    }
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 800px;
+        @media (min-width: 1024px) and (max-width: 1340px) {
+            margin-top:75px;
+        }
+        @include breakpoint(medium down) {
+            max-width: 414px;
+            justify-content: center;
+        }
+    }
+    &__card {
+        background-color: white;
+        padding: 42px 62px;
+        width: 360px;
+        position: relative;
+        margin: 20px;
+        box-shadow: 0 12px 42px 12px rgba(0,0,0,0.03);
+        @include breakpoint(medium down) {
+            width: 414px;
+            margin: 0;
+            margin-bottom: 34px;
+            padding: 32px 50px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @include breakpoint(small only) {
+            width: 272px;
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+        &:after {
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            content: '';
+            background-color: $blue-light;
+        }
+        &-title {
+            color: #333333;
+            font-family: $source-sans;
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 0.07px;
+            line-height: 40px;
+            @include breakpoint(medium down) {
+                font-weight: 400;
+                margin-bottom: 20px;
+                font-size: 22px;
+                letter-spacing: 0.05px;
+                line-height: 30px;
+            }
+        }
+        &-txt {
+            color: #333333;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            line-height: 28px;
+            margin-bottom: 0;
+            @include breakpoint(medium down) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+.bg-title.--line-cards {
+    position: absolute;
+    top:150px;
+    left: 0;
+    @media (min-width: 1024px) and (max-width: 1340px) {
+        top: 50px;
+    }
+    @include breakpoint(medium down) {
+        top:50px;
+        font-size: 61px;
+        letter-spacing: 4.78px;
+        line-height: 60px;
+    }
+    @include breakpoint(390px down) {
+        font-size: 44px;
+    }
+
+}

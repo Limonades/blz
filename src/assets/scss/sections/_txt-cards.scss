@@ -1,0 +1,179 @@
+.txt-cards {
+    position: relative;
+    margin-bottom:134px;
+    @include breakpoint(medium down) {
+        margin-bottom: 108px;
+    }
+    @include breakpoint(small only) {
+        margin-bottom: 40px;
+    }
+    &-container {
+        padding: 96px 0;
+        width: 100%;
+        max-width: 1240px;
+        margin: 0 auto;
+        background: $blue-gradient;
+        min-height: 768px;
+        @include breakpoint(small only) {
+            padding-bottom: 50px;
+        }
+    }
+    &__wrap {
+        display: flex;
+        @include breakpoint(large down) {
+            flex-direction: column;
+        }
+    }
+    &__txt-wrap {
+        max-width: 527px;
+        width: 100%;
+    }
+    &__cards-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80%;
+        margin-right: -280px;
+        @include breakpoint(1260px down) {
+            margin-right: -70px;
+            width: 100%;
+        }
+
+        &.--txt-block {
+            justify-content: flex-start;
+            @include breakpoint(1260px down){
+                justify-content: center;
+            }
+            .txt-block {
+                margin: 18px;
+                @include breakpoint(1400px down){
+                    max-width: 304px;
+                }
+                @include breakpoint(large down){
+                    max-width: 360px;
+                }
+                @include breakpoint(medium down){
+                    max-width: 412px;
+                }
+                @include breakpoint(small only){
+                    max-width: 272px;
+                }
+            }
+        }
+
+
+    }
+    &__txt {
+        color: white;
+        font-size: 28px;
+        font-weight: 300;
+        letter-spacing: 0.07px;
+        line-height: 40px;
+        max-width: 440px;
+        @include breakpoint(large down) {
+            max-width: 600px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+        @include breakpoint(medium down) {
+            font-size: 22px;
+            letter-spacing: 0.05px;
+            line-height: 30px;
+            font-weight: 400;
+        }
+        @include breakpoint(small only) {
+            margin-bottom: 42px;
+        }
+    }
+    &__card {
+        padding: 34px 42px;
+        background-color: white;
+        box-shadow: 0 12px 42px 12px rgba(0,0,0,0.08);
+        margin: 18px;
+        width: 360px;
+        @include breakpoint(medium down) {
+            width: 416px;
+        }
+        @include breakpoint(small only) {
+            width: 272px;
+        }
+        &-icon {
+            display: block;
+            margin-bottom: 66px;
+            &:before {
+                font-size: 56px;
+                color: $yellow;
+            }
+        }
+        &-title {
+            color: $blue;
+            font-family: $source-sans;
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            line-height: 28px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            @include breakpoint(medium down) {
+                font-size: 14px;
+                letter-spacing: 1.17px;
+                line-height: 20px;
+            }
+        }
+        &-txt {
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 45px;
+            margin-bottom:0;
+            color: #333333;
+            font-family: $martel;
+            @include breakpoint(medium down) {
+                font-size: 22px;
+                letter-spacing: -0.07px;
+                line-height: 34px;
+            }
+        }
+    }
+}
+
+.bg-title.--txt-cards {
+    position: absolute;
+    top:166px;
+    color: $blue-light;
+    max-width: 500px;
+    line-height: 98px;
+    @include breakpoint(large down) {
+        max-width: inherit;
+    }
+    @include breakpoint(medium down) {
+        max-width: inherit;
+        top:40px;
+    }
+    @include breakpoint(small only) {
+        font-size: 61px;
+        letter-spacing: 4.78px;
+        line-height: 60px;
+        top:60px;
+    }
+    @include breakpoint(390px down) {
+        font-size: 44px;
+    }
+}
+
+.section-title.--txt-cards {
+    margin-top:136px;
+    @include breakpoint(large down) {
+        margin-top: 135px;
+    }
+    @include breakpoint(medium down) {
+        margin-top: 0;
+    }
+    @include breakpoint(small only) {
+        margin-top: 0;
+    }
+
+}
+
+.section-title.--txt-photos {
+    margin-top: 60px;
+}

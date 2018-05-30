@@ -1,0 +1,206 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+      #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+      /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+  </head>
+  <body>
+  <main class="page-content">
+
+    <nav class="--half-bg">
+      <div class="row">
+        <div class="nav-wrap">
+
+          <a class="logo" href="#">
+            <i class="icon-logo-white"></i>
+            <div class="logo-fixed">
+              <img src="../assets/img/symbol.svg" alt="">
+            </div>
+            <i class="icon-bluezelle-wordmark"></i>
+          </a>
+
+          <ul class="nav-menu show-for-large">
+            <li class="nav-menu__item">
+              <a class="nav-menu__link --active" href="">
+                how it works
+              </a>
+            </li>
+            <li class="nav-menu__item">
+              <a class="nav-menu__link" href="">
+                blz tokens
+              </a>
+            </li>
+            <li class="nav-menu__item">
+              <a class="nav-menu__link" href="">
+                developers
+              </a>
+            </li>
+            <li class="nav-menu__item">
+              <a class="nav-menu__link" href="">
+                team
+              </a>
+            </li>
+            <li class="nav-menu__item --btn">
+              <a class="btn" href="#">
+                <div class="btn-l-a --l1"></div>
+                <div class="btn-l-a --l2"></div>
+                <div class="btn-l-a --l3"></div>
+                <div class="btn-l-a --l4"></div>
+                <div class="btn-l-a --l5"></div>
+                <div class="btn-l-a --l6"></div>
+                <div class="btn-l-a --l7"></div>
+                get early access
+                <div class="btn-r-a --l1"></div>
+                <div class="btn-r-a --l2"></div>
+                <div class="btn-r-a --l3"></div>
+                <div class="btn-r-a --l4"></div>
+                <div class="btn-r-a --l5"></div>
+                <div class="btn-r-a --l6"></div>
+                <div class="btn-r-a --l7"></div>
+              </a>
+            </li>
+          </ul>
+
+
+          <div class="hamburger-wrap hide-for-large">
+            <div class="hamburger-menu"></div>
+          </div>
+
+        </div>
+      </div>
+      <ul class="mobile-menu">
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="">
+            how it works
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="">
+            blz tokens
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="">
+            developers
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="">
+            team
+          </a>
+        </li>
+      </ul>
+    </nav>
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+
+    {{> body}}
+    
+
+  </main>
+  <footer>
+    <div class="row">
+      <div class="column">
+        <div class="footer-wrap">
+        
+          <div class="footer__nav-wrap">
+            <div class="footer-logo-wrap">
+              <img src="../assets/img/symbol.svg" alt="logo">
+            </div>
+          
+            <ul class="footer__nav">
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  about
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  events
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  blog
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  careers
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  press
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  contact
+                </a>
+              </li>
+            </ul>
+        
+          </div>
+        
+          <ul class="social__list">
+            <li class="social__list-item">
+              <a class="social__list-link" href="#" target="_blank">
+                <i class="icon-send-message-icon"></i>
+              </a>
+            </li>
+            <li class="social__list-item">
+              <a class="social__list-link" href="#" target="_blank">
+                <i class="icon-medium-icon"></i>
+              </a>
+            </li>
+            <li class="social__list-item">
+              <a class="social__list-link" href="#" target="_blank">
+                <i class="icon-reddit">
+                  <span class="path2"></span>
+                  <span class="path3"></span>
+                </i>
+              </a>
+            </li>
+            <li class="social__list-item">
+              <a class="social__list-link" href="#" target="_blank">
+                <i class="icon-github-logo"></i>
+              </a>
+            </li>
+            <li class="social__list-item">
+              <a class="social__list-link" href="#" target="_blank">
+                <i class="icon-Twitter"></i>
+              </a>
+            </li>
+          </ul>
+      
+        </div>
+      
+        <div class="footer-copyright-wrap">
+          <p class="footer-copyright">
+            © 2018 Bluzelle Networks Pte Ltd.
+          </p>
+        
+          <p class="footer-copyright__link-wrap">
+            Built by
+            <a class="footer-copyright__link icon-skyrocket-logo" href="https://skyrocket.is/" target="_blank"></a>
+          </p>
+        </div>
+    
+      </div>
+    </div>
+  </footer>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>-->
+    <script src="{{root}}assets/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+.press-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+    @include breakpoint(small only) {
+        margin-bottom: 40px;
+    }
+    &-wrap {
+        width: 100%;
+        max-width: 964px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom:60px;
+        @include breakpoint(medium down) {
+            justify-content: center;
+        }
+    }
+
+    &__card {
+        margin: 20px 16px;
+        @include breakpoint(medium down) {
+            max-width: 345px;
+            margin: 14px 4px;
+        }
+        @media (min-width: 640px) and (max-width: 710px) {
+            max-width: 312px;
+        }
+    }
+    &__name {
+        @include breakpoint(medium down) {
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+    }
+}

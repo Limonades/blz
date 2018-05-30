@@ -1,0 +1,20 @@
+.txt-btn.--guide {
+    .txt-btn__txt.--h3 {
+        font-family: $source-sans;
+        font-size: 28px;
+        font-weight: 300;
+        letter-spacing: 0.07px;
+        line-height: 40px;
+        @include breakpoint(medium down) {
+            font-size: 22px;
+            letter-spacing: 0.05px;
+            line-height: 30px;
+        }
+    }
+}
+
+.header.--guide {
+    @include breakpoint(medium down) {
+        margin-bottom: 0;
+    }
+}

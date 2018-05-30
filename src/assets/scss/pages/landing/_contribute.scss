@@ -1,0 +1,74 @@
+.contribute {
+    margin: 0 rem-calc(16);
+    margin-bottom:rem-calc(140);
+    display: flex;
+    @include breakpoint(medium down) {
+        margin-bottom:rem-calc(100);
+    }
+    &-title-wrap {
+        padding-top: rem-calc(120);
+        width:50%;
+        @include breakpoint(large down) {
+            width: auto;
+            margin-bottom: rem-calc(50);
+        }
+        @include breakpoint(medium down) {
+            padding-top: 0;
+            margin-bottom: rem-calc(80);
+        }
+        .bg-title {
+            @media (min-width: 1200px) and (max-width: 1400px) {
+                font-size: rem-calc(85);
+            }
+        }
+    }
+    @include breakpoint(large down) {
+        flex-direction: column;
+    }
+}
+
+.txt-block-wrap {
+    &.--contribute {
+        position: relative;
+        left: -18px;
+        width:50%;
+        @include breakpoint(large down) {
+            width: auto;
+            position: static;
+            justify-content: center;
+        }
+        @include breakpoint(small only) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .txt-block {
+            margin-right:rem-calc(40);
+            @include breakpoint(small only) {
+                margin-right: 0;
+                margin-bottom: rem-calc(52);
+                max-width: rem-calc(272);
+            }
+            &:last-child {
+                margin-right: 0;
+                @include breakpoint(small only) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.section-title {
+    &.--contribute {
+        max-width: rem-calc(448);
+        margin: 0 auto;
+        margin-top: rem-calc(12);
+        @include breakpoint(large down) {
+            max-width: 80%;
+        }
+        @include breakpoint(medium down) {
+            margin: inherit;
+        }
+    }
+}

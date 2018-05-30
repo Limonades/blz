@@ -1,0 +1,62 @@
+header.--partners {
+    padding-top: 180px;
+    @include breakpoint(medium down) {
+        padding-top: 130px;
+    }
+    @include breakpoint(small only) {
+        padding-bottom: 0;
+    }
+    .header__content {
+        margin-bottom: 50px;
+        @include breakpoint(small only) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.pentagon.--partners {
+    .pentagon-bg.--left {
+        @include breakpoint(medium down) {
+            //max-width: 180px;
+            bottom:-77px;
+        }
+    }
+    @include breakpoint(medium down) {
+    }
+    @include breakpoint(small only) {
+
+    }
+}
+
+//.bg-title.--partners {
+//    @include breakpoint(small only) {
+//        font-size: 61px;
+//        font-weight: 900;
+//        letter-spacing: 4.78px;
+//        line-height: 60px;
+//    }
+//}
+
+.pentagon-wrap.--partners {
+    padding: 54px 122px;
+    @include breakpoint(medium down) {
+        padding: 54px 60px;
+    }
+    @include breakpoint(small only) {
+        padding: 54px 30px;
+    }
+}
+
+.pentagon.--no-bg .pentagon-wrap.--partners .pentagon__title {
+    font-family: $martel;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    @include breakpoint(medium down) {
+        margin-top: 10px;
+        margin-bottom: 70px;
+    }
+    @include breakpoint(small only) {
+
+    }
+}

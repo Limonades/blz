@@ -1,0 +1,145 @@
+header {
+    position: relative;
+    margin: 0 rem-calc(16);
+    margin-bottom: rem-calc(100);
+    z-index:10;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 220px;
+    min-height: 620px;
+    &:after {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: linear-gradient(136.53deg, rgba(2, 58, 123, 0.4) 0%, rgba(0, 110, 185, 0.4) 100%), linear-gradient(136.53deg, rgba(2, 58, 123, 0.4) 0%, rgba(0, 110, 185, 0.4) 100%);
+        z-index: -1;
+    }
+    @include breakpoint(medium down) {
+        margin: 0;
+        margin-bottom:rem-calc(70);
+        padding: 0 rem-calc(16);
+        padding-top: 140px;
+        min-height: 422px;
+    }
+    @include breakpoint(small only) {
+        padding: 0;
+        padding-top: 110px;
+    }
+}
+
+.header {
+    &-info {
+        margin-bottom: rem-calc(100);
+        @include breakpoint(medium down) {
+            margin-bottom:rem-calc(50);
+        }
+    }
+}
+
+.page {
+    &-title {
+        color: $white;
+        font-size: rem-calc(72);
+        line-height: rem-calc(72);
+        margin-bottom:rem-calc(16);
+        font-weight: $extra-bold-weight;
+        @include breakpoint(medium down) {
+            font-size: rem-calc(46);
+            line-height: rem-calc(58);
+        }
+    }
+    &-intro {
+        color: $white;
+        font-size: rem-calc(22);
+        margin-bottom:rem-calc(70);
+        @include breakpoint(medium down) {
+            font-size: rem-calc(20);
+            max-width: rem-calc(450);
+        }
+        @include breakpoint(small only) {
+            margin-bottom: rem-calc(40);
+        }
+    }
+}
+
+.logo {
+    max-width: rem-calc(180);
+    display: flex;
+    align-items: center;
+    i:first-child {
+        font-size: rem-calc(66);
+        @include breakpoint(small only) {
+            font-size: rem-calc(42);
+        }
+    }
+    i:last-child {
+        font-size: rem-calc(24);
+        @include breakpoint(small only) {
+            font-size: rem-calc(16);
+        }
+        &:before {
+            color: white;
+        }
+    }
+    @include breakpoint(small only) {
+        max-width: rem-calc(134);
+    }
+    &-btn-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top:rem-calc(46);
+        margin-bottom:rem-calc(186);
+        @include breakpoint(medium down) {
+            margin-bottom: rem-calc(82);
+        }
+    }
+}
+
+.companies {
+    background-color: $white;
+    box-shadow: 0 0 10px 0 rgba(168,168,168,0.3);
+    padding: rem-calc(22) rem-calc(40) rem-calc(40);
+    position: relative;
+    bottom: rem-calc(-46);
+    @include breakpoint(small only) {
+        padding: rem-calc(22) rem-calc(40);
+    }
+    &__title {
+        color: $blue;
+        font-weight: $semi-bold-weight;	
+        letter-spacing: 1px;
+        font-size:rem-calc(12);
+        text-transform: uppercase;
+        margin-bottom:rem-calc(20);
+        @include breakpoint(small only) {
+            font-size: rem-calc(10);
+            text-align: center;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom:0;
+        &-item {
+            max-width: 100px;
+            @include breakpoint(small only) {
+                margin: 0 rem-calc(6);
+                margin-bottom: rem-calc(10);
+            }
+        }
+        &-link {
+            @include breakpoint(medium down) {
+                width: rem-calc(65);
+            }
+            img {
+                max-height: 30px;
+            }
+        }
+    }
+}

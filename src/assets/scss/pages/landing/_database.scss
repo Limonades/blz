@@ -1,0 +1,65 @@
+.database {
+    margin-left: rem-calc(16);
+    margin-bottom:rem-calc(140);
+    position: relative;
+    @include breakpoint(medium down) {
+        margin-bottom: rem-calc(80);
+        margin-left: 0;
+    }
+    &-container {
+        padding-top: rem-calc(80);
+        width: 100%;
+        max-width: rem-calc(1240);
+        margin: 0 auto;
+        background: $blue-gradient;
+        min-height: rem-calc(768);
+        .section-title {
+            @include breakpoint(medium down) {
+                margin-bottom: rem-calc(50);
+            }
+        }
+    }
+}
+
+.bg-title {
+    &.--database {
+        position: relative;
+        bottom: -90px;
+        color: $blue-light;
+    }
+}
+
+.txt-block-wrap {
+    &.--database {
+        position: absolute;
+        width: 100%;
+        max-width: 75rem;
+        top:280px;
+        right: 16px;
+        @include breakpoint(1265 down) {
+            justify-content: flex-end;
+        }
+        @include breakpoint(large down) {
+            right: 8px;
+        }
+        @include breakpoint(medium down) {
+            position: static;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: rem-calc(30);
+        }
+        .txt-block {
+            @media (min-width: rem-calc(1024)) and (max-width: rem-calc(1160)) {
+                max-width: rem-calc(314);
+            }
+            @include breakpoint(medium down) {
+                margin-right: 0;
+                margin-bottom:rem-calc(44);
+            }
+            @include breakpoint(small only) {
+                max-width: rem-calc(272);
+            }
+        }
+    }
+}
+

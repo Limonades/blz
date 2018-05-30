@@ -1,0 +1,261 @@
+
+.btn {
+    background-color: $yellow;
+    text-transform: uppercase;
+    color: $white;
+    font-size: rem-calc(12);
+    letter-spacing: 1px;
+    padding: rem-calc(12) rem-calc(10);
+    font-weight: $bold-weight;
+    position: relative;
+    z-index:10;
+    margin: 0 20px;
+    text-align: center;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: -54px;
+        content: '';
+        width: 52px;
+        height: 100%;
+        @include breakpoint(medium down) {
+            width: 27px;
+            left: -32px;
+        }
+    }
+    &:after {
+        position: absolute;
+        top: 0;
+        right: -54px;
+        content: '';
+        width: 52px;
+        height: 100%;
+        @include breakpoint(medium down) {
+            width: 27px;
+            right: -32px;
+        }
+    }
+    @media (min-width: rem-calc(1024)) and (max-width: rem-calc(1270)) {
+        margin: 0 50px;
+    }
+    @include breakpoint(medium down) {
+        font-size: rem-calc(9);
+        padding: rem-calc(7) rem-calc(8);
+    }
+    &:hover {
+        .btn-r-a {
+            &.--l2 {
+                right: 0;
+            }
+            &.--l3 {
+                right: -20px;
+                @include breakpoint(medium down) {
+                    right: -10px;
+                }
+            }
+            &.--l5 {
+                right: -20px;
+                @include breakpoint(medium down) {
+                    right: -10px;
+                }
+            }
+            &.--l6 {
+                right: -20px;
+                @include breakpoint(medium down) {
+                    right: -10px;
+                }
+            }
+        }
+        .btn-l-a {
+            &.--l3 {
+                left: 0;
+            }
+            &.--l4 {
+                left: 0;
+            }
+            &.--l5 {
+                left:-20px;
+                @include breakpoint(medium down) {
+                    left: -10px;
+                }
+            }
+        }
+    }
+}
+
+.btn-r-a {
+    position: absolute;
+    transition: right .3s ease-in-out;
+    z-index:-1;
+    background-color: $yellow;
+    &.--l1 {
+        width: 20px;
+        height: 18px;
+        top: 0;
+        right: -20px;
+        @include breakpoint(medium down) {
+            width: 10px;
+            height: 12px;
+            right: -10px;
+        }
+    }
+    &.--l2 {
+        width: 45px;
+        height: 3px;
+        top: 8px;
+        right: -45px;
+        @include breakpoint(medium down) {
+            width: 15px;
+            height: 2px;
+            top: 6px;
+            right: -25px;
+        }
+    }
+    &.--l3 {
+        width: 20px;
+        height: 5px;
+        top: 16px;
+        right: 0;
+        @include breakpoint(medium down) {
+            width: 13px;
+            height: 2px;
+            top: 12px;
+            right: 0;
+        }
+    }
+    &.--l4 {
+        width: 20px;
+        height: 12px;
+        top: 21px;
+        right: -20px;
+        @include breakpoint(medium down) {
+            width: 10px;
+            height: 7px;
+            top: 14px;
+            right: -10px;
+        }
+    }
+    &.--l5 {
+        width: 15px;
+        height: 3px;
+        top: 25px;
+        right: -35px;
+        @include breakpoint(medium down) {
+            width: 14px;
+            height: 2px;
+            top: 17px;
+            right: -20px;
+        }
+    }
+    &.--l6 {
+        width: 20px;
+        height: 5px;
+        top: 32px;
+        right: -12px;
+        @include breakpoint(medium down) {
+            width: 15px;
+            height: 3px;
+            top: 21px;
+            right: -5px;
+        }
+    }
+    &.--l7 {
+        width: 20px;
+        height: 6px;
+        top: 36px;
+        right: -20px;
+        @include breakpoint(medium down) {
+            width: 10px;
+            height: 4px;
+            top: 23px;
+            right: -10px;
+        }
+    }
+}
+
+.btn-l-a {
+    position: absolute;
+    transition: left .3s ease-in-out;
+    background-color: $yellow;
+    z-index:-1;
+    &.--l1 {
+        width: 20px;
+        height: 26px;
+        top: 0;
+        left: -20px;
+        @include breakpoint(medium down) {
+            width: 10px;
+            left: -10px;
+            height:18px;
+        }
+    }
+    &.--l2 {
+        width: 20px;
+        height: 12px;
+        bottom: 0;
+        left: -20px;
+        @include breakpoint(medium down) {
+            width: 10px;
+            height: 6px;
+            left: -10px;
+        }
+    }
+    &.--l3 {
+        width: 15px;
+        height: 3px;
+        top: 8px;
+        left: -44px;
+        @include breakpoint(medium down) {
+            width: 12px;
+            height: 2px;
+            left: -27px;
+        }
+    }
+    &.--l4 {
+        width: 15px;
+        height: 3px;
+        top: 18px;
+        left: -35px;
+        @include breakpoint(medium down) {
+            width: 12px;
+            height: 2px;
+            top: 13px;
+            left: -22px;
+        }
+    }
+    &.--l5 {
+        width: 34px;
+        height: 3px;
+        top: 27px;
+        left: -54px;
+        @include breakpoint(medium down) {
+            width: 22px;
+            height: 2px;
+            top: 19px;
+            left: -32px;
+        }
+    }
+    &.--l6 {
+        width: 20px;
+        height: 1px;
+        top: 26px;
+        left: -20px;
+        @include breakpoint(medium down) {
+            width: 9px;
+            top: 18px;
+            left: -10px;
+        }
+    }
+    &.--l7 {
+        width: 5px;
+        height: 4px;
+        top: 27px;
+        left: -5px;
+        @include breakpoint(medium down) {
+            width: 2px;
+            height: 3px;
+            top: 18px;
+            left: -1px;
+        }
+    }
+}

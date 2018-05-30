@@ -1,0 +1,63 @@
+.events {
+    margin-bottom:60px;
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 964px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        margin-top: -40px;
+        @include breakpoint(medium down) {
+            margin-top: -20px;
+            max-width: 704px;
+        }
+        @include breakpoint(712px down) {
+            justify-content: center;
+        }
+        @include breakpoint(small only) {
+            margin-top: -12px;
+        }
+    }
+}
+
+.event-block.--events {
+    margin: 16px;
+    @include breakpoint(medium down) {
+        max-width: 344px;
+        margin: 8px 4px;
+    }
+    @media (min-width: 640px) and (max-width: 712px) {
+        max-width: 312px;
+    }
+    @include breakpoint(small only) {
+        margin: 0 16px;
+        margin-bottom: 24px;
+    }
+    .event-block__name {
+        @include breakpoint(medium down) {
+            font-weight: 400;
+        }
+    }
+}
+
+.bg-title.--events {
+    max-width: 811px;
+    letter-spacing: 8px;
+    line-height: 88px;
+    @include breakpoint(medium down) {
+        max-width: 448px;
+        font-size: 61px;
+        font-weight: 900;
+        letter-spacing: 4.78px;
+        line-height: 60px;
+    }
+    @include breakpoint(400px down) {
+        font-size: 55px;
+    }
+}
+
+.pagination.--events {
+    margin: 0 auto;
+    margin-top: 70px;
+}

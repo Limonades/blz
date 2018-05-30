@@ -1,0 +1,142 @@
+.header {
+    padding-bottom: 70px;
+    padding-top: 220px;
+    min-height: 620px;
+    @include breakpoint(medium down) {
+        padding-top: 140px;
+        min-height: 422px;
+        margin-bottom: 66px;
+    }
+    @include breakpoint(small only) {
+        padding-top: 110px;
+        padding-bottom:80px;
+        margin-bottom: 50px;
+    }
+    &.--half-bg {
+        background-size: 56% 100%;
+        background-position: right;
+        padding-bottom: 70px;
+        padding-top: 180px;
+        min-height: 620px;
+        @include breakpoint(large down) {
+            background-size: 52% 100%;
+        }
+        @include breakpoint(medium down) {
+            background-size: 50% 100%;
+            padding-top: 140px;
+            min-height: 422px;
+            margin-bottom: 66px;
+        }
+        @include breakpoint(small only) {
+            background-size: cover;
+            padding-top: 110px;
+            padding-bottom:80px;
+            margin-bottom: 50px;
+        }
+        &:after {
+            left: auto;
+            right: 0;
+            width: 56%;
+            @include breakpoint(large down) {
+                width: 52%;
+            }
+            @include breakpoint(medium down) {
+                width: 50%;
+            }
+            @include breakpoint(small only) {
+                width: 100%;
+            }
+        }
+        .header__content {
+            max-width: 450px;
+            @include breakpoint(medium down) {
+                max-width: 318px;
+            }
+            .header__title {
+                color: #000;
+                @include breakpoint(small only) {
+                    color: white;
+                }
+            }
+            .header__txt {
+                color: #333333;
+                @include breakpoint(small only) {
+                    color: white;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__title {
+        max-width: 807px;
+        color: #FFFFFF;
+        font-size: 43px;
+        font-weight: 800;
+        letter-spacing: -0.2px;
+        line-height: 62px;
+        @include breakpoint(medium down) {
+            font-size: 28px;
+            letter-spacing: -0.47px;
+            line-height: 40px;
+            max-width: 486px;
+        }
+    }
+    &__subtitle {
+        max-width: 807px;
+        color: #FFFFFF;
+        font-size: 31px;
+        font-weight: 800;
+        letter-spacing: -0.2px;
+        line-height: 47px;
+        @include breakpoint(medium down) {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: -0.07px;
+            line-height: 34px;
+            max-width: 486px;
+        }
+    }
+    &__txt {
+        max-width: 807px;
+        color: #FFFFFF;
+        font-family: $source-sans;
+        font-size: 28px;
+        letter-spacing: 0.07px;
+        line-height: 40px;
+        margin-bottom:40px;
+        @include breakpoint(medium down) {
+            font-size: 22px;
+            letter-spacing: 0.05px;
+            line-height: 30px;
+            max-width: 450px;
+        }
+        @include breakpoint(small only) {
+            margin-bottom: 30px;
+        }
+    }
+    &__btn-wrap {
+        @include breakpoint(small only) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .btn {
+            margin-right: 100px;
+            @include breakpoint(medium down) {
+                margin-right: 60px;
+            }
+            @include breakpoint(small only) {
+                margin-right: 20px;
+                margin-bottom: 24px;
+            }
+            &:last-child {
+                margin-right: 20px;
+                @include breakpoint(small only) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

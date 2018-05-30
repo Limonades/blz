@@ -1,0 +1,137 @@
+.row {
+    @include breakpoint(medium down) {
+        max-width: rem-calc(704);
+    }
+}
+
+section {
+    position: relative;
+}
+
+input, textarea {
+    color: #333333;
+    font-family: $source-sans;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    padding: 8px 14px;
+    width: 100%;
+    border: 1px solid #E6E6E6;
+    @include breakpoint(medium down) {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+button {
+    line-height: inherit;
+    cursor: pointer;
+    &:after {
+        display: none;
+    }
+    &:before {
+        display: none;
+    }
+}
+
+label {
+    color: $blue;
+    font-family: $source-sans;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 28px;
+    text-transform: uppercase;
+    @include breakpoint(medium down) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    span {
+        display: inline-block;
+        margin-bottom: 8px;
+        @include breakpoint(medium down) {
+            font-size: 14px;
+            letter-spacing: 1.17px;
+            line-height: 20px;
+        }
+    }
+}
+
+input:focus, textarea:focus, select:focus {
+    border: 1px solid $blue-light;
+    outline:none;
+}
+
+.--no-scroll {
+    overflow: hidden;
+}
+
+.page-content {
+    width: 100%;
+    max-width: rem-calc(1460);
+    margin: 0 auto;
+    margin-top: rem-calc(16);
+    overflow: hidden;
+    position: relative;
+    @include breakpoint(medium down) {
+        margin-top: 0;
+    }
+    &.--ov {
+        overflow: visible;
+    }
+}
+
+.bg-title {
+    opacity: 0.15;	
+    color: $yellow;
+    font-size: rem-calc(102);	
+    font-weight: $black-weight;	
+    letter-spacing: 8px;
+    line-height: rem-calc(28);
+    margin: 0;
+    text-transform: uppercase;
+    font-family: $source-sans;
+    @include breakpoint(medium down) {
+        font-size: rem-calc(54);
+    }
+    @include breakpoint(small down) {
+        line-height: rem-calc(40);
+        letter-spacing: 4px;
+        word-break: break-word;
+    }
+    @include breakpoint(400 down) {
+        font-size: rem-calc(40);
+    }
+}
+
+.section-title {
+    max-width: rem-calc(800);
+    color: $black;
+    font-family: $martel;
+    font-size: rem-calc(43);
+    font-weight: $extra-bold-weight;
+    letter-spacing: -0.2px;
+    position: relative;
+    @include breakpoint(large down) {
+        font-size: rem-calc(28);
+    }
+    @include breakpoint(medium down) {
+        color: #333333;
+        max-width: 560px;
+    }
+    &.--white {
+        color: white;
+    }
+}
+
+.fancybox-button.fancybox-button--close {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    background: transparent;
+    color: white;
+    margin-top:30px;
+    margin-right: 30px;
+}
+
+

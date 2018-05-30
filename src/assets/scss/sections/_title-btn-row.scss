@@ -1,0 +1,41 @@
+.title-btn-row {
+    margin-bottom: 100px;
+    @include breakpoint(small only) {
+        margin-bottom: 52px;
+    }
+    &-wrap {
+        margin-top: -40px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        @include breakpoint(medium down) {
+            align-items: flex-start;
+        }
+        @include breakpoint(small only) {
+            flex-direction: column;
+        }
+    }
+    &__title {
+        margin-bottom: 0;
+        @include breakpoint(small only) {
+            margin-top: 18px;
+            margin-bottom: 34px;
+        }
+    }
+    &__btn {
+        min-width: 88px;
+        width: 180px;
+        @include breakpoint(medium down) {
+            width: 135px;
+        }
+    }
+
+    .bg-title {
+        max-width: 947px;
+        line-height: 98px;
+        @include breakpoint(small only) {
+            line-height: 54px;
+        }
+    }
+}

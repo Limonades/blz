@@ -1,0 +1,178 @@
+.txt-photos {
+    position: relative;
+    margin-bottom: 134px;
+    @include breakpoint(medium down) {
+        margin-bottom: 108px;
+    }
+    @include breakpoint(small only) {
+        margin-bottom: 40px;
+    }
+    &-container {
+        padding: 96px 0;
+        width: 100%;
+        max-width: 1240px;
+        margin: 0 auto;
+        background: $blue-gradient;
+        @include breakpoint(medium down) {
+            padding: 60px 0;
+        }
+    }
+    &__wrap {
+        display: flex;
+        @include breakpoint(1140px down) {
+            justify-content: center;
+        }
+    }
+    &__txt-wrap {
+        @include breakpoint(large down) {
+            max-width: 450px;
+        }
+        @include breakpoint(1140px down) {
+            max-width: 100%;
+        }
+        @include breakpoint(medium down) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__photos-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80%;
+        margin-right: -280px;
+        position: relative;
+        @include breakpoint(1400px down) {
+            width: 69%;
+        }
+        @include breakpoint(1140px down) {
+            display: none;
+        }
+    }
+    &__btn {
+        @include breakpoint(medium down) {
+            align-self: center;
+        }
+        @include breakpoint(small only) {
+            align-self: flex-start;
+        }
+    }
+    &__txt {
+        margin-bottom: 44px;
+        color: white;
+        font-size: 28px;
+        font-weight: 300;
+        letter-spacing: 0.07px;
+        line-height: 40px;
+        max-width: 440px;
+        @include breakpoint(large down) {
+            max-width: 600px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+        @include breakpoint(medium down) {
+            font-size: 22px;
+            letter-spacing: 0.05px;
+            line-height: 30px;
+            font-weight: 400;
+            margin-bottom:22px;
+        }
+        @include breakpoint(small only) {
+            margin-bottom: 42px;
+        }
+    }
+    &__photos {
+        width: 362px;
+        height: 362px;
+        background-size: cover;
+        background-position: center;
+        margin: 18px;
+        @include breakpoint(large down) {
+            width: 300px;
+            height: 300px;
+        }
+    }
+    &__block {
+        width: 362px;
+        margin: 18px;
+        @include breakpoint(medium down) {
+            width: 341px;
+            margin: 4px;
+        }
+        @include breakpoint(small only) {
+            width: 272px;
+            margin-bottom: 32px;
+        }
+        .txt-photos__photos {
+            margin: 0;
+            width: 100%;
+        }
+        &-description {
+            padding: 40px;
+            background-color: white;
+        }
+        &-name {
+            color: #333333;
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 0.07px;
+            line-height: 40px;
+            margin-bottom: 2px;
+            @include breakpoint(medium down) {
+                font-size: 22px;
+                letter-spacing: 0.05px;
+                line-height: 30px;
+                font-weight: 400;
+            }
+        }
+        &-position {
+            color: $blue;
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            line-height: 28px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            @include breakpoint(medium down) {
+                font-size: 14px;
+                letter-spacing: 1.17px;
+                line-height: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        &-info {
+            color: #333333;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            line-height: 28px;
+            margin-bottom: 0;
+            @include breakpoint(medium down) {
+                font-size: 16px;
+                letter-spacing: 0.44px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+.bg-title.--txt-photos {
+    position: absolute;
+    top: 96px;
+    color: $blue-light;
+    max-width: 500px;
+    line-height: 98px;
+    @include breakpoint(medium down) {
+        left:50px;
+        top:20px;
+    }
+    @include breakpoint(770px down) {
+        left:0;
+    }
+}
+
+.section-title.--txt-photos {
+    @include breakpoint(medium down) {
+        margin-bottom: 10px;
+        margin-top: 12px;
+    }
+}

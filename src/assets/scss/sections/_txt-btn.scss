@@ -1,0 +1,74 @@
+.txt-btn {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index:1;
+    &:after {
+        position: absolute;
+        top:0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: linear-gradient(136.53deg, rgba(2, 58, 123, 0.4) 0%, rgba(0, 110, 185, 0.4) 100%), linear-gradient(136.53deg, rgba(2, 58, 123, 0.4) 0%, rgba(0, 110, 185, 0.4) 100%);
+    }
+    &-wrap {
+        padding: 100px 34px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include breakpoint(medium down) {
+            padding: 80px 34px;
+        }
+        @include breakpoint(small only) {
+            padding: 80px 16px;
+            align-items: flex-start;
+        }
+    }
+    &__txt {
+        max-width: 688px;
+        color: #FFFFFF;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 45px;
+        margin-bottom: 40px;
+        @include breakpoint(medium down) {
+            max-width: 556px;
+            font-size: 22px;
+            letter-spacing: -0.07px;
+            line-height: 34px;
+        }
+    }
+    &__btn {
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 688px;
+            width: 100%;
+            @include breakpoint(medium down) {
+                max-width: 556px;
+                justify-content: center;
+                a {
+                    margin-right: 100px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+            @include breakpoint(small only) {
+                flex-direction: column;
+                align-items: flex-start;
+                a {
+                    margin-bottom:18px;
+                    margin-right: 32px;
+                    &:last-child {
+                        margin-bottom: 0;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

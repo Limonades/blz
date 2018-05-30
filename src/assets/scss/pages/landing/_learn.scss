@@ -1,0 +1,34 @@
+.learn {
+    margin-bottom: rem-calc(100);
+    position: relative;
+    @include breakpoint(small only) {
+        margin-bottom: rem-calc(60);
+    }
+    &-bg {
+        position: absolute;
+        right: 0;
+        bottom: -165px;
+        z-index: 20;
+        @include breakpoint(1400 down) {
+            right: -60px;
+        }
+        @include breakpoint(1300 down) {
+            right: -100px;
+        }
+        @include breakpoint(large down) {
+            right: -160px;
+        }
+        @include breakpoint(medium down) {
+            max-width: 230px;
+            right: 0;
+        }
+        @include breakpoint(830 down) {
+            max-width: 160px;
+            right: -15px;
+            bottom: -130px;
+        }
+        @include breakpoint(small only) {
+            bottom: -90px;
+        }
+    }
+}

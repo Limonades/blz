@@ -1,0 +1,28 @@
+.section-title.--txt-cards.--careers {
+    max-width: 448px;
+    @include breakpoint(medium down) {
+        max-width: 100%;
+    }
+}
+
+.pentagon-wrap.--careers {
+    padding: 70px 110px;
+    @include breakpoint(medium down) {
+        padding: 70px;
+    }
+    @include breakpoint(small only) {
+        padding: 60px 32px;
+    }
+    .pentagon__txt {
+        max-width:688px;
+        a {
+            color: $yellow;
+        }
+    }
+}
+
+.txt-cards.--careers {
+    @include breakpoint(medium down) {
+        margin-bottom: 80px;
+    }
+}

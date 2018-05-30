@@ -1,0 +1,202 @@
+.pentagon {
+    margin-bottom: rem-calc(140);
+    position: relative;
+    @include breakpoint(medium down) {
+        margin-bottom: rem-calc(90);
+    }
+    &-bg {
+        position: absolute;
+        z-index: 2;
+        &.--left {
+            left: 15px;
+            bottom: -70px;
+            @include breakpoint(1400 down) {
+                left: -100px;
+            }
+            @include breakpoint(large down) {
+                bottom: -150px;
+                left: -130px;
+            }
+            @include breakpoint(medium down) {
+                bottom: -110px;
+                left: -35px;
+                max-width: 222px;
+            }
+            @include breakpoint(900 down) {
+                max-width: 192px;
+            }
+            @include breakpoint(767 down) {
+                bottom: -110px;
+                left: -60px;
+            }
+            @include breakpoint(small only) {
+                max-width: 142px;
+                bottom: -85px;
+                left: -45px;
+            }
+        }
+        &.--right {
+            right: 0;
+            top: -50px;
+            @include breakpoint(1400 down) {
+                right: -120px;
+            }
+            @include breakpoint(large down) {
+                right: -130px;
+                top: -115px;
+            }
+            @include breakpoint(medium down) {
+                top: -98px;
+                right: 0;
+            }
+            @include breakpoint(900 down) {
+                max-width: 220px;
+            }
+            @include breakpoint(small only) {
+                top: -25px;
+                right: -65px;
+                max-width: 160px;
+            }
+        }
+        @include breakpoint(medium down) {
+            max-width: 250px;
+        }
+    }
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: white;
+        width: 100%;
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 54px 110px;
+        box-shadow: 0 0 10px 0 rgba(202,202,202,0.3);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index:1;
+        &:after {
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background: linear-gradient(136.53deg, rgba(2, 58, 123, 0.4) 0%, rgba(0, 110, 185, 0.4) 100%), linear-gradient(136.53deg, rgba(2, 58, 123, 0.4) 0%, rgba(0, 110, 185, 0.4) 100%);
+            z-index: -1;
+        }
+        @include breakpoint(medium down) {
+            padding: 54px 60px;
+        }
+        @include breakpoint(small only) {
+            flex-direction: column;
+            padding: 40px 34px;
+            width: auto;
+        }
+    }
+    &__title {
+        color: white;
+        line-height: 45px;
+        margin-bottom: 2px;
+    }
+    &__subtitle {
+        font-family: $source-sans;
+        color: white;
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        line-height: 28px;
+        text-transform: uppercase;
+        @include breakpoint(medium down) {
+            font-size: 14px;
+            letter-spacing: 1.17px;
+            line-height: 20px;
+        }
+    }
+    &__txt {
+        color: white;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        line-height: 28px;
+        margin-bottom: 34px;
+        @include breakpoint(medium down) {
+            font-size: 16px;
+            letter-spacing: 0.44px;
+            line-height: 24px;
+        }
+    }
+    &.--no-bg {
+        .pentagon-wrap {
+            background-color: white;
+            &:after {
+                display: none;
+            }
+            .pentagon__title {
+                color: #333333;
+                font-family: $source-sans;
+                font-size: 28px;
+                letter-spacing: 0.07px;
+                line-height: 40px;
+                margin-bottom: 34px;
+                font-weight: 300;
+                @include breakpoint(medium down) {
+                    font-weight: 500;
+                    font-size: 22px;
+                    line-height: 30px;
+                    letter-spacing: 0.05px;
+                }
+            }
+            .pentagon__txt {
+                color: #000000;
+                @include breakpoint(medium down) {
+                    font-size: 16px;
+                    letter-spacing: 0.44px;
+                    line-height: 24px;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__form {
+        width: 100%;
+        @include breakpoint(medium only) {
+            margin-bottom: 30px;
+        }
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            @include breakpoint(small only) {
+                margin-bottom: 0;
+            }
+            @include breakpoint(small only) {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+            &.--full-width {
+                label {
+                    max-width: 100%;
+                }
+            }
+            label {
+                width: 100%;
+                max-width: 325px;
+                margin-right: 38px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                @include breakpoint(small only) {
+                    max-width: 100%;
+                    margin-bottom: 30px;
+                }
+            }
+            textarea {
+                height:130px;
+                resize: none;
+            }
+        }
+    }
+}

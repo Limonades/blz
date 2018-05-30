@@ -1,0 +1,195 @@
+.txt-block-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.txt-block {
+    max-width: rem-calc(360);
+    padding: rem-calc(46);
+    background-color: white;
+    box-shadow: 0 12px 42px 12px rgba(0,0,0,0.08);
+    margin-right: rem-calc(24);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include breakpoint(small only) {
+        padding: rem-calc(46) rem-calc(32);
+    }
+    &:before {
+        position: absolute;
+        content: '';
+        width: 45px;
+        height: 45px;
+        background-color: $blue-light;
+        top:-10px;
+        left:-10px;
+        box-shadow: 0 0 10px 0 rgba(168,168,168,0.3);
+        color: white;
+        font-size: 26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 26px;
+    }
+    &.--tag {
+        &:before {
+            font-family: 'Bluzzelle' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            content: "\e91d";
+            font-size: rem-calc(22);
+        }
+    }
+    &.--bluzzele {
+        &:before {
+            font-family: 'Bluzzelle' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            content: "\e91b";
+            font-size: rem-calc(32);
+        }
+    }
+    &.--else {
+        &:before {
+            font-family: 'Bluzzelle' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            content: "\e91c";
+            font-size: rem-calc(30);
+        }
+    }
+    &.--book {
+        &:before {
+            font-family: 'Bluzzelle' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            content: "\e92e";
+            font-size: rem-calc(30);
+        }
+    }
+    &.--play {
+        &:before {
+            font-family: 'Bluzzelle' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            content: "\e91e";
+            font-size: rem-calc(30);
+        }
+    }
+    &.--atom {
+        &:before {
+            font-family: 'Bluzzelle' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            content: "\e928";
+            font-size: rem-calc(30);
+        }
+    }
+    &.--slack {
+        &:before {
+            font-family: 'Bluzzelle' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            content: "\e937";
+            font-size: rem-calc(30);
+        }
+    }
+    &.--conference {
+        &:before {
+            font-family: 'Bluzzelle' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            content: "\e91a";
+            font-size: rem-calc(30);
+        }
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    p {
+        margin-bottom: 28px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__title {
+        color: #333333;
+    }
+    &__txt {
+        color: #333333;
+        font-size: rem-calc(18);
+        @include breakpoint(medium down) {
+            font-size: rem-calc(16);
+        }
+    }
+    &__link {
+        color: $yellow;
+        font-size: 12px;
+        font-weight: $bold-weight;
+        letter-spacing: 1px;
+        line-height: 15px;
+        text-transform: uppercase;
+        padding-right: 30px;
+        position: relative;
+        margin-top: auto;
+        @include breakpoint(small only) {
+            font-size: 10px;
+        }
+        &:before {
+            font-family: 'Bluzzelle' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            position: absolute;
+            top: 2px;
+            right: -6px;
+            content: '\e900';
+            color: $yellow;
+            transition: right .3s ease;
+            @include breakpoint(small only) {
+                top:3px;
+            }
+        }
+        &:hover {
+            &:before {
+                right: -30px;
+            }
+        }
+    }
+}

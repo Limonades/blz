@@ -1,0 +1,157 @@
+
+.access {
+    &__form {
+        label {
+            color: white;
+            @include breakpoint(medium down) {
+                font-size: 14px;
+            }
+        }
+        &-btn-wrap {
+            margin-top: 40px;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            @include breakpoint(medium down) {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 12px;
+            }
+            @include breakpoint(small only) {
+                margin-top: 20px;
+                margin-bottom: 16px;
+            }
+        }
+        &-btn-sign {
+            color: white;
+            font-size: 18px;
+            letter-spacing: 2px;
+            line-height: 28px;
+            margin-bottom: 0;
+            @include breakpoint(medium down) {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+        &-description {
+            color: #FFFFFF;
+            font-family: $source-sans;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.83px;
+            line-height: 18px;
+            max-width: 800px;
+            text-transform: uppercase;
+            @include breakpoint(medium down) {
+                font-size: 10px;
+                line-height: 18px;
+                max-width: 488px;
+            }
+        }
+    }
+}
+
+header.--access {
+    padding-bottom: 80px;
+    @include breakpoint(medium down) {
+        padding-top: 200px;
+        padding-bottom: 50px;
+    }
+    @include breakpoint(small only) {
+        padding-top:130px;
+    }
+}
+
+header.--access.--access-ty {
+    @include breakpoint(medium down) {
+        padding-top: 300px;
+        padding-bottom: 200px;
+    }
+    @include breakpoint(small only) {
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+}
+
+.header__subtitle.--access {
+    margin-bottom: 40px;
+    @include breakpoint(small only) {
+        margin-bottom: 25px;
+    }
+}
+
+#mc_embed_signup .mc-field-group label {
+    @include breakpoint(medium down) {
+        margin-bottom: 10px;
+    }
+}
+
+#mc_embed_signup form {
+    padding: 0;
+}
+
+#mc_embed_signup {
+    max-width: 486px;
+    width: 100%;
+    background-color: transparent;
+    @include breakpoint(small only) {
+        max-width: 100%;
+    }
+}
+
+#mc_embed_signup .button.btn {
+    background-color: #FDBA4D;
+    text-transform: uppercase;
+    color: #fefefe;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    padding: 0.75rem 0.625rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 10;
+    margin: 0 20px;
+    margin-right: 90px;
+    text-align: center;
+    border-radius: 0;
+    height: 42px;
+    line-height: inherit;
+    font-family: $source-sans;
+    @include breakpoint(medium down) {
+        font-size: rem-calc(9);
+        padding: rem-calc(7) rem-calc(8);
+        height: 27px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+#mc_embed_signup .mc-field-group input {
+    color: #333333;
+    font-family: $source-sans;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    padding: 8px 4px;
+    width: 100%;
+    border: 1px solid #E6E6E6;
+    border-radius: 0;
+    @include breakpoint(medium down) {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    &:focus {
+        border: 1px solid $blue-light;
+        outline:none;
+    }
+}
+
+#mc_embed_signup .mc-field-group {
+    padding-bottom: 5%;
+    @include breakpoint(small only) {
+        width: 100%;
+    }
+}
+
+#mc_embed_signup .asterisk {
+    color: white;
+}

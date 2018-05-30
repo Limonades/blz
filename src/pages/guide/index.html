@@ -1,0 +1,284 @@
+<header class="header --guide --half-bg" style="background-image: url('../assets/img/paul-minami-556032-unsplash.png')">
+    <div class="row">
+        <div class="column">
+
+            <div class="header__content">
+                <h1 class="header__title">
+                    For Developers
+                </h1>
+                <p class="header__txt">
+                    Read our product guide below, or speak directly with our project team on Slack
+                </p>
+                <a class="pentagon__btn btn" href="#">
+                    <div class="btn-l-a --l1"></div>
+                    <div class="btn-l-a --l2"></div>
+                    <div class="btn-l-a --l3"></div>
+                    <div class="btn-l-a --l4"></div>
+                    <div class="btn-l-a --l5"></div>
+                    <div class="btn-l-a --l6"></div>
+                    <div class="btn-l-a --l7"></div>
+                    join slack
+                    <div class="btn-r-a --l1"></div>
+                    <div class="btn-r-a --l2"></div>
+                    <div class="btn-r-a --l3"></div>
+                    <div class="btn-r-a --l4"></div>
+                    <div class="btn-r-a --l5"></div>
+                    <div class="btn-r-a --l6"></div>
+                    <div class="btn-r-a --l7"></div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<section class="guide" id="guide">
+    <div class="row column">
+        <div class="guide-wrap">
+
+            <div class="guide__drop">
+                <div class="guide__drop-title-wrap">
+                    <p class="guide__drop-title hide-for-large">
+                        Acquire BLZ tokens
+                    </p>
+                    <i class="hide-for-large guide__drop-icon icon-ctrl"></i>
+                </div>
+                <ul class="guide__list">
+                    <li class="guide__list-item">
+                        <h4 class="guide__list-title">
+                            settings up
+                        </h4>
+                    </li>
+                    <li class="guide__list-item">
+                        <a class="guide__list-btn --active" href="#info-1">
+                            Acquire BLZ tokens
+                        </a>
+                    </li>
+                    <li class="guide__list-item">
+                        <a class="guide__list-btn" href="#info-2">
+                            Get Address
+                        </a>
+                    </li>
+                    <li class="guide__list-item">
+                        <a class="guide__list-btn" href="#info-3">
+                            Fund DSA
+                        </a>
+                    </li>
+                    <li class="guide__list-item">
+                        <a class="guide__list-btn" href="#info-4">
+                            Import File
+                        </a>
+                    </li>
+                    <li class="guide__list-item">
+                        <a class="guide__list-btn" href="#info-5">
+                            Instatiate Interface
+                        </a>
+                    </li>
+                    <li class="guide__list-item">
+                        <a class="guide__list-btn" href="#info-6">
+                            Optional Callbacks
+                        </a>
+                    </li>
+                    <li class="guide__list-item">
+                        <a class="guide__list-btn" href="#info-7">
+                            Database Calls
+                        </a>
+                    </li>
+                    <li class="guide__list-item">
+                        <a class="guide__list-btn" href="#info-8">
+                            Optional Event Listeners
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="guide__content">
+                <h2 class="guide__content-title">
+                    Settings Up
+                </h2>
+
+                <article class="guide__info" id="info-1">
+                    <h3 class="guide__info-title">
+                        Acquire BLZ Tokens
+                    </h3>
+                    <h4 class="guide__info-subtitle">
+                        Buy BLZ tokens into your Ethereum wallet. If on a testnet, use the Bluzelle faucet.
+                    </h4>
+                    <p>
+                        Depending on which Ethereum network you are on:
+                    </p>
+                    <p>
+                        Mainnet
+                    </p>
+                    <p>
+                        Purchase a minimum number of BLZ tokens (ie: USD $500 worth) and store them into an Ethereum account owned by you. BLZ can be purchased directly from Bluzelle for ETH/BTC or from major crypto exchanges.
+                        Rinkeby/Ropsten
+                    </p>
+                    <p>
+                        If you are developing on a testnet (Rinkeby or Ropsten), look at the Bluzelle development API to get access to the BLZ faucet. Use the “getTokens” function to acquire up to 1K BLZ tokens per day, per Ethereum calling account. The BLZ tokens will be sent to the calling account within one block confirmation.
+                    </p>
+                </article>
+
+                <article class="guide__info" id="info-2">
+                    <h3 class="guide__info-title">
+                        Get Address
+                    </h3>
+                    <h4 class="guide__info-subtitle">
+                        Acquire the Ethereum address of the Bluzelle library smart contract (BLSC).
+                    </h4>
+                    <p>
+                        Acquire the Ethereum address of the Bluzelle Library Smart Contract (BLSC), which will vary depending on if you are on Mainnet, Rinkeby or Ropsten.
+                    </p>
+                </article>
+
+                <article class="guide__info" id="info-3">
+                    <h3 class="guide__info-title">
+                        Fund DSA
+                    </h3>
+                    <h4 class="guide__info-subtitle">
+                        Fund your BLSC account with a suitable amount of BLZ tokens (ie: USD $100 worth).
+                    </h4>
+                    <p>
+                        Send a suitable amount of BLZ tokens (ie: USD $100 worth) to the BLSC. The BLSC will hold these tokens in trust for you in your own Database Spending Account (DSA), and will only use these tokens when you issue DB calls to the database from the very same calling Ethereum address.
+                    </p>
+                    <p>
+                        At any time, you can withdraw unspent BLZ tokens back to you, provided you initiate this request from the same Ethereum address you funded your DSA with. on which Ethereum network you are on:
+                    </p>
+                </article>
+
+                <article class="guide__info" id="info-4">
+                    <h3 class="guide__info-title">
+                        Import File
+                    </h3>
+                    <h4 class="guide__info-subtitle">
+                        Import the BLSC solidity interface file (bluzelle.sol).
+                    </h4>
+                    <p>
+                        Import the BLSC solidity interface file (bluzelle.sol) with a function call such as:
+                    </p>
+                    <p>
+                        import “Bluzelle.sol”;
+                    </p>
+                </article>
+
+                <article class="guide__info" id="info-5">
+                    <h3 class="guide__info-title">
+                        Instantiate Interface
+                    </h3>
+                    <h4 class="guide__info-subtitle">
+                        Instantiate a calling interface to the BLSC in your smart contract.
+                    </h4>
+                    <p>
+                        Instantiate a calling interface to the BLSC in your smart contract, as follows:
+                    </p>
+                    <p>
+                        contract MySmartContract{
+                        Bluzelle _bluzelle;
+                        function MySmartContract(address bluzelleLibrarySmartContractAddress) {<br>
+                        _bluzelle = Bluzelle(bluzelleLibrarySmartContractAddress);}<br>
+                        }
+                    </p>
+                    <p>
+                        This example requires you to instantiate your own smart contract with the hexadecimal Ethereum address of the BLSC. You can of course perform this logic outside of your smart contract constructor, as needed.
+                    </p>
+                </article>
+
+                <article class="guide__info" id="info-6">
+                    <h3 class="guide__info-title">
+                        Optional Callbacks
+                    </h3>
+                    <h4 class="guide__info-subtitle">
+                        Optionally, implement the callback interface from the BLSC to your smart contract.
+                    </h4>
+                    <p>
+                        Optionally, inherit your smart contract from the Bluzelle callback abstract interface, to enable functional callbacks to your smart contract from any calls made to Bluzelle (all calls to Bluzelle always result in events also being emitted). Look at the contents of Bluzelle.sol at the different callback interfaces for details. You can implement multiple such interfaces (ie: read and update), as needed.
+                    </p>
+                    <p>
+                        An example of implementing the read callback interface:
+                    </p>
+                    <p>
+                        contract MySmartContract is BluzelleReadCallback {…function ReadCallback(string strKey, string strValue){}
+                        …}
+                    </p>
+                    <p>
+                        Set up the callback as appropriate, to react to the return value from the database call. In this example, you might want to perform some additional smart contract logic once a value you read from the database has been returned to you.
+                    </p>
+                </article>
+
+                <article class="guide__info" id="info-7">
+                    <h3 class="guide__info-title">
+                        Database Calls
+                    </h3>
+                    <h4 class="guide__info-subtitle">
+                        Make database calls (ie: create, read, update, delete) using the BLSC calling interface.
+                    </h4>
+                    <p>
+                        Make database calls (ie: create, read, update, delete) using the BLSC calling interface instantiated above:
+                    </p>
+                    <p>
+                        _bluzelle.read(“someKey”, true)
+                    </p>
+                    <p>
+                        The boolean parameter indicates whether or not Bluzelle should attempt to call back your smart contract when the return value comes back. Typically, it is useful for this value to be true for reads, but note the BLZ cost is higher for such callbacks, to factor in the Ethereum gas cost Bluzelle incurs, of calling your smart contract back.
+                    </p>
+                    <p>
+                        ALL calls to Bluzelle are asynchronous (ie: the calls to Bluzelle return immediately, as the “work” is done by the database off-chain), and upon completion, an asynchronous event is emitted by Bluzelle that you can listen for. As indicated above, you can optionally ask Bluzelle to also call your smart contract back directly with the return value.
+                    </p>
+                    <p>
+                        The appropriate amount of BLZ will be debited from your BLZ account on the BLSC.
+                    </p>
+                    <p>
+                        Note: As part of the Ethereum protocol, you will also be charged a very minimal amount of Ethereum gas to make this transaction (which will be added to the total gas cost of your calling smart contract function). The majority of the “cost” of Bluzelle database calls (Create, Read, Update, Delete) will be borne out of the BLZ account you pre-funded earlier, not Ethereum gas costs.
+                    </p>
+                </article>
+
+                <article class="guide__info" id="info-8">
+                    <h3 class="guide__info-title">
+                        Optional Event Listeners
+                    </h3>
+                    <h4 class="guide__info-subtitle">
+                        React to the responses from the database calls in the optional callback interface or via event listeners.
+                    </h4>
+                    <p>
+                        Optionally, setup event listeners for all calls made to Bluzelle. For example, a call to read from Bluzelle will result in the following event being emitted:
+                    </p>
+                    <p>
+                        event ReadEvent(string strKey, string strValue);
+                    </p>
+                    <p>
+                        events, whenever possible, is an effective way to greatly reduce your gas costs, particularly with reads (where a return value is inherently needed). For example, if your software architecture enables it, instead of paying extra BLZ to have Bluzelle call your smart contract directly (ie: on-chain) with the results of a read, simply listen for the ReadEvent, capture the “returned” key and value, and then perform your logic accordingly, including possibly passing these values back into your smart contract.
+                    </p>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="txt-btn --guide" style="background-image: url('../assets/img/ari-spada-562779-unsplash.png')">
+    <div class="txt-btn-wrap">
+        <h2 class="txt-btn__txt">
+            Connect With Us
+        </h2>
+        <h3 class="txt-btn__txt --h3">
+            Speak directly with our project team and get first access to announcements on Telegram
+        </h3>
+        <a class="txt-btn__btn btn" href="#">
+            <div class="btn-l-a --l1"></div>
+            <div class="btn-l-a --l2"></div>
+            <div class="btn-l-a --l3"></div>
+            <div class="btn-l-a --l4"></div>
+            <div class="btn-l-a --l5"></div>
+            <div class="btn-l-a --l6"></div>
+            <div class="btn-l-a --l7"></div>
+            join telegram
+            <div class="btn-r-a --l1"></div>
+            <div class="btn-r-a --l2"></div>
+            <div class="btn-r-a --l3"></div>
+            <div class="btn-r-a --l4"></div>
+            <div class="btn-r-a --l5"></div>
+            <div class="btn-r-a --l6"></div>
+            <div class="btn-r-a --l7"></div>
+        </a>
+    </div>
+</section>
