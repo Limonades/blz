@@ -1,7 +1,6 @@
 .newsletter {
     padding-top: 40px;
     padding-bottom: 50px;
-    margin-top: -80px;
     z-index:10;
     @include breakpoint(medium down) {
         padding: 44px 0;
@@ -58,4 +57,23 @@
             cursor: pointer;
         }
     }
+}
+
+#mc-embedded-subscribe {
+    margin: 0;
+}
+
+.newsletter__form-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    @include breakpoint(medium down) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+#mc_embed_signup.--newsletter {
+    max-width: 100%;
 }
